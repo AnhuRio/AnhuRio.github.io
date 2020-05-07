@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FullPricedGames</title>
+  <link rel="stylesheet" href="MainPage.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<style>
+
+
+*{margin:0;
+  padding:0;}
+
+
+  /*NavBar*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #111111;
+    background-color: #f3f3f3;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  li a.active {
+    color: white;
+    background-color: #4CAF50;
+  }
+</style>
+
+<body>
+  <div id = "container">
+    <div id = "banner">
+      <div id="Logo">
+        <img src="images/FPG_LOGO.png">
+      </div>
+      <div id="SearchBar">
+        <img src="images/Searchbar.png">
+      </div>
+    </div>
+
+    <div id = "greyspace2">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="GamePage.html">GamePageExample</a></li>
+        <li><a href="ContactPage.html">Contact</a></li>
+      </ul>
+
+      <div id="plan">
+        The Witcher 3
+      </div>
+
+      <div id="GameBox" class="FullGame">
+
+        <div class="gallery">
+
+          <div class="column">
+            <img src="images/WitcherLogo.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="images/Witcher1.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="images/Witcher2.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="images/Witcher3.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+          </div>
+          <div class="containerImages">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:60%">
+            <div id="imgtext"></div>
+          </div>
+        </div>
+        <p><a href="https://thewitcher.com/en/witcher3">Purchase</a> </p>
+        <p>The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt and based on The Witcher series of fantasy novels by Andrzej Sapkowski. It is the sequel to the 2011 game The Witcher 2: Assassins of Kings, played in an open world with a third-person perspective. Players control protagonist Geralt of Rivia, a monster hunter (known as a witcher) who is looking for his missing adopted daughter on the run from the Wild Hunt, an otherworldly force determined to capture her and use her powers. Players battle the game's many dangers with weapons and magic, interact with non-player characters, and complete main-story and side quests to acquire experience points and gold, which are used to increase Geralt's abilities and purchase equipment. Its central story has several endings, determined by the player's choices at certain points in the game.</p>
+
+        <div clss="RatingSystem">
+          <span class="heading">User Rating</span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <p>4.1 average based on 254 reviews.</p>
+        </div>
+
+        <div class="bars">
+          <div class="side">
+            <div>5 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-5"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>150</div>
+          </div>
+          <div class="side">
+            <div>4 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-4"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>63</div>
+          </div>
+          <div class="side">
+            <div>3 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-3"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>15</div>
+          </div>
+          <div class="side">
+            <div>2 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-2"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>6</div>
+          </div>
+          <div class="side">
+            <div>1 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>20</div>
+          </div>
+
+          <div id="Comments">
+            Username: <input type="text" name="usrname">
+            <button onclick="dataSend()">Submit</button>
+            <br>
+            <textarea rows="10" cols="50" name="comment" form="usrform">
+              Enter text here...</textarea>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div id="footer">
+          <p>Follow us on:</p>
+          <div class="images">
+            <a href="default.asp">
+              <img src="images/DiscordLogo.png" alt="Discord" style="width:42px;height:42px;border:0">
+            </a>
+            <a href="">
+              <img src="images/FacebookLogo.png" alt="Facebook" style="width:42px;height:42px;border:0">
+            </a>
+            <a href="">
+              <img src="images/TwitterLogo.png" alt="Twitter" style="width:42px;height:42px;border:0">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+    function dataSend() {
+      alert("Data Send ///This Function is still not inplemented/// ");
+    }
+
+    </script>
+
+  </body>
+  </html>

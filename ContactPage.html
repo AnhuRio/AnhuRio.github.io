@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FullPricedGames</title>
+  <link rel="stylesheet" href="MainPage.css" type="text/css">
+</head>
+<style>
+
+*{margin:0;
+  padding:0;}
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  li a.active {
+    color: white;
+    background-color: #4CAF50;
+  }
+
+  /*Gallery */
+
+
+</style>
+<div id = "container">
+  <div id = "banner">
+    <div id="Logo">
+      <img src="images/FPG_LOGO.png">
+    </div>
+
+    <div id="SearchBar">
+      <img src="images/Searchbar.png">
+    </div>
+  </div>
+
+
+  <div id = "greyspace">
+    <!-- NavBar -->
+    <ul>
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="GamePage.html">GamePageExample</a></li>
+      <li><a href="ContactPage.html">Contact</a></li>
+    </ul>
+  <!-- NavBar -->
+
+
+    <div id="Contact" class="GameBox">
+      <div id="Title">
+        <h2>Where To Find Us</h2>
+        <div id="googleMap" style="width:50%;height:500px;"></div>
+<p>Our company is located in Dundee,Scotland  </p>
+</div>
+</div>
+</div>
+
+
+  <div id="footer">
+    Follow us on:
+    <div class="images">
+      <a href="default.asp">
+        <img src="images/DiscordLogo.png" alt="Discord" style="width:42px;height:42px;border:0">
+      </a>
+      <a href="">
+        <img src="images/FacebookLogo.png" alt="Facebook" style="width:42px;height:42px;border:0">
+      </a>
+      <a href="">
+        <img src="images/TwitterLogo.png" alt="Twitter" style="width:42px;height:42px;border:0">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+
+
+<script>
+function myMap() {
+  var mapProp= {
+  center:new google.maps.LatLng(56.462017,-2.970721),
+  zoom:12,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8HhLyZOEANaXc3VqgrwFHOhfndKQkaO0&callback=myMap"></script>
