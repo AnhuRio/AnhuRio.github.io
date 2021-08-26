@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FullPricedGames</title>
+  <link rel="stylesheet" href="MainPage.css" type="text/css">
+
+</head>
+<style>
+
+*{margin:0;
+  padding:0;}
+
+  * { border: 1px solid red; }
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+  }
+
+  li {
+    float: left;
+    text-align: center;
+  }
+
+  li a {
+    display:table;
+    color: #666;
+    padding: 14px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  li a.active {
+    color: white;
+    background-color: #4CAF50;
+  }
+
+  /*Gallery */
+
+</style>
+<div id = "container">
+
+  <div id = "banner">
+
+    <div id="Logo">
+      <a href="index.html">
+      <img src="Images/FPG_LOGO.png">
+    </a>
+    </div>
+
+
+    <div id="SearchBar">
+      <img src="Images/Searchbar.png">
+    </div>
+  </div>
+
+  <div id = "whitespace">
+  </div>
+
+  <div id = "greyspace">
+
+    <!-- NavBar -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="GamePage1.html">Game1</a></li>
+      <li><a href="GamePage2.html">Game2</a></li>
+      <li><a href="GamePage3.html">Game3</a></li>
+      <li><a href="GamePage4.html">Game4</a></li>
+      <li><a href="GamePage.html">GamePageExample</a></li>
+      <li><a href="ContactPage.html">Contact</a></li>
+    </ul>
+    <!-- End of Nav Bar -->
+
+
+    <div id="SlideBox" class="GameBox">
+      <div id="Title">
+        <h3>Popular </h3>
+      </div>
+      <!-- Gallery -->
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="Images/Cyberpunk.jpg" href="GamePage.html" >
+          <div class="text"<a href="GamePage.html"></a>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="Images/Hitman3.jpg">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="Images/Borderlands3.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+
+
+  <div id="footer">
+    Follow us on:
+    <div class="Images">
+      <a href="SocialPageD.html">
+        <img src="Images/DiscordLogo.png" alt="Discord" style="width:42px;height:42px;border:0">
+      </a>
+      <a href="">
+        <img src="Images/FacebookLogo.png" alt="Facebook" style="width:42px;height:42px;border:0">
+      </a>
+      <a href="">
+        <img src="Images/TwitterLogo.png" alt="Twitter" style="width:42px;height:42px;border:0">
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+<script>//Galery script
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>

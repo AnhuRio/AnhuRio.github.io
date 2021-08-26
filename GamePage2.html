@@ -3,7 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FullPricedGames</title>
-  <link rel="stylesheet" href="MainPage.css" type="text/css">
+  <link rel="stylesheet" href="CSS/MainPage.css" type="text/css">
+  <link rel="stylesheet" href="CSS/Index.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -15,35 +16,25 @@
   padding:0;}
 
 
-  /*NavBar*/
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  .topnav {
     overflow: hidden;
-    border: 1px solid #111111;
-    background-color: #f3f3f3;
+    background-color: #333;
   }
 
-  li {
+  /* Style the topnav links */
+  .topnav a {
     float: left;
-  }
-
-  li a {
     display: block;
-    color: #666;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
 
-  li a:hover:not(.active) {
+  /* Change color on hover */
+  .topnav a:hover {
     background-color: #ddd;
-  }
-
-  li a.active {
-    color: white;
-    background-color: #4CAF50;
+    color: black;
   }
 </style>
 
@@ -62,19 +53,17 @@
 
     <div id = "greyspace2">
       <!-- NavBar -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="GamePage1.html">Game1</a></li>
-        <li><a href="GamePage2.html">Game2</a></li>
-        <li><a href="GamePage3.html">Game3</a></li>
-        <li><a href="GamePage4.html">Game4</a></li>
-        <li><a href="GamePage.html">GamePageExample</a></li>
-        <li><a href="ContactPage.html">Contact</a></li>
-      </ul>
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="GamePage1.html">Game1</a>
+        <a href="GamePage2.html">Game2</a>
+        <a href="GamePage3.html">Game3</a>
+        <a href="GamePage4.html">Game4</a>
+    </div>
     <!-- NavBar -->
 
       <div id="plan">
-        The Witcher 2
+        Hitman 3 [Game Pages will be updated on a later date]
       </div>
 
       <div id="GameBox" class="FullGame">
